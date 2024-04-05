@@ -4,7 +4,7 @@ const routes = require("./routes");
 const db = require("./config/connection");
 const cors = require("cors");
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 4000;
 const app = express();
 
 app.use(cors());
@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === "production") {
 
 // app.get('*', (req, res) => {
 //   res.sendFile(path.join(__dirname, '../client/build/index.html'));
-// });
+// }
 
 app.use(routes);
 app.use("/", (req, res) => {
