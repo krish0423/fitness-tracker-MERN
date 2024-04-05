@@ -21,6 +21,9 @@ if (process.env.NODE_ENV === "production") {
 // });
 
 app.use(routes);
+app.use("/", (req, res) => {
+  res.status(200).json("HELLO");
+});
 
 // try {
 //   db.once("open", () => {
